@@ -1,0 +1,13 @@
+def a (n, tiang_asal, tiang_bantu, tiang_tujuan):
+    if n == 1:
+        print(f"Pindahkan cakram 1 dari {tiang_asal} ke {tiang_tujuan}")
+        return
+    
+    a (n-1, tiang_asal, tiang_tujuan, tiang_bantu)
+    
+    print(f"Pindahkan cakram {n} dari {tiang_asal} ke {tiang_tujuan}")
+    
+    a (n-1, tiang_bantu, tiang_asal, tiang_tujuan)
+
+jumlah_cakram = 3
+a (jumlah_cakram, 'A', 'B', 'C')
